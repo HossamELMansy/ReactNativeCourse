@@ -13,3 +13,13 @@ npm install
 
 react-native run-android
 ```
+
+### To run albums-api locally
+
+```
+cd ReactNativeCourse/albums-api
+
+npm install
+
+npm run start
+```
