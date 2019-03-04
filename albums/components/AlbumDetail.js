@@ -1,8 +1,9 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import React from 'react'
+import { View, Text, Image, StyleSheet, Linking } from 'react-native'
 
-import Card from './Card';
-import CardSection from './CardSection';
+import Card from './Card'
+import CardSection from './CardSection'
+import Button from './Button'
 
 const AlbumDetail = props => (
   <Card>
@@ -24,9 +25,11 @@ const AlbumDetail = props => (
       <Image style={styles.image} source={{ uri: props.albumProp.image }} />
     </CardSection>
 
-    <CardSection />
+    <CardSection>
+      <Button onPress={() => Linking.openURL(props.albumProp.url)} />
+    </CardSection>
   </Card>
-);
+)
 
 const styles = StyleSheet.create({
   thumbnail_image: {
@@ -46,6 +49,6 @@ const styles = StyleSheet.create({
   artist: {
     fontSize: 15
   }
-});
+})
 
-export default AlbumDetail;
+export default AlbumDetail
