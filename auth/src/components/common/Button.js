@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TouchableOpacity, StyleSheet, Alert } from 'react-native'
+import { Text, TouchableOpacity, StyleSheet } from 'react-native'
 
 const Button = props => {
   const { buttonStyle, textStyle } = styles
