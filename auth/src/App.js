@@ -8,14 +8,10 @@ import LoginForm from './components/LoginForm'
 
 class App extends Component {
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: 'AIzaSyDKujh7LX_yv1A4hBC6usaMd2m3SHtpW64',
-      authDomain: 'auth-50b78.firebaseapp.com',
-      databaseURL: 'https://auth-50b78.firebaseio.com',
-      projectId: 'auth-50b78',
-      storageBucket: 'auth-50b78.appspot.com',
-      messagingSenderId: '1034536955378'
-    })
+    // Replace config with your own firebse credentials
+    const config = {}
+
+    firebase.initializeApp(config)
   }
 
   render() {
