@@ -1,16 +1,16 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
 const Header = props => {
-  const { color, title } = props;
-  const { dasani, dasaniText } = styles;
+  const { color, title } = props
+  const { dasani, dasaniText } = styles
 
   return (
-    <View style={[dasani, { backgroundColor: color || "#09C" }]}>
+    <View style={[dasani, { backgroundColor: color || '#09C' }]}>
       <Text style={dasaniText}>{title}</Text>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   dasani: {
@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
   dasaniText: {
     fontSize: 20
   }
-});
+})
 
-export { Header };
+export { Header }
