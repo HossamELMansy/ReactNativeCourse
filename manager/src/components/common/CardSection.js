@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
     padding: 5,
     borderColor: '#000',
     borderBottomWidth: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: "center"
   }
-})
+});
 
 export { CardSection }
