@@ -30,6 +30,30 @@ export const employeeCreate = (name, phone, shift) => dispatch => {
     });
 };
 
+export const employeeEdit = (id, name, phone, shift) => dispatch => {
+  const { uid } = firebase.auth().currentUser;
+
+  firebase
+    .database()
+    .ref(`/users/${uid}/employees/${id}`)
+    .set({ name, phone, shift, car: 'BMW' })
+    .then(() => {
+      Actions.pop();
+    });
+};
+
+export const employeeDelete = id => dispatch => {
+  const { uid } = firebase.auth().currentUser;
+
+  firebase
+    .database()
+    .ref(`/users/${uid}/employees/${id}`)
+    .remove()
+    .then(() => {
+      Actions.pop();
+    });
+};
+
 export const fetchEmployees = () => dispatch => {
   const { uid } = firebase.auth().currentUser;
 
@@ -38,6 +62,7 @@ export const fetchEmployees = () => dispatch => {
     .ref(`/users/${uid}/employees`)
     .on('value', snapshot => {
       const employeesObj = snapshot.val();
+
       const employeesArr = _.map(employeesObj, (value, key) => {
         return { ...value, id: key };
       });

@@ -10,12 +10,12 @@ import Routing from './components/Routing';
 class App extends Component {
   componentWillMount() {
     firebase.initializeApp({
-      apiKey: 'AIzaSyCoS0uphjA_r0u6cuZi_JbgfHi5n0BqOCU',
-      authDomain: 'manager-d16af.firebaseapp.com',
-      databaseURL: 'https://manager-d16af.firebaseio.com',
-      projectId: 'manager-d16af',
-      storageBucket: 'manager-d16af.appspot.com',
-      messagingSenderId: '310167521327'
+      apiKey: "AIzaSyCAuZf0vV2Iw61KzyYFK2euHDw_gf6QyWE",
+      authDomain: "manager-b6dae.firebaseapp.com",
+      databaseURL: "https://manager-b6dae.firebaseio.com",
+      projectId: "manager-b6dae",
+      storageBucket: "manager-b6dae.appspot.com",
+      messagingSenderId: "840510985699"
     });
   }
 
